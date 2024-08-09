@@ -15,12 +15,15 @@ const Hero = () => {
     <StyledSection>
         <ContentWrapper>
           <TextWrapper>
+            <div style={{width:'35%'}}>
             <Separator/>
             <Title>Humanizing your insurance.</Title>
             <Description>Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that's right for you. Ensure you and your loved ones are protected.</Description>
             <ActionButton>VIEW PLANS</ActionButton> 
-          </TextWrapper>
+            </div>
             <HeroImage src={heroImage} alt='hero'/>
+          </TextWrapper>
+            {/* <HeroImage src={heroImage} alt='hero'/> */}
             <PatternRightImage src={patternRight} alt='pattern'/>
         </ContentWrapper>
     </StyledSection>
@@ -35,14 +38,16 @@ const StyledSection = styled.section`
   height:520px;
 `
 const ContentWrapper = styled.div`
-  display:flex;
-  justify-content:center;
+  // display:flex;
+  // justify-content:center;
   position:relative;
   padding:100px;
 `
 const TextWrapper = styled.div`
-  max-width:30%;
+  // max-width:35%;
   // border:2px solid red;
+  display:flex;
+  justify-content:center;
 `
 const Separator = styled.div`
   border:0;
@@ -63,6 +68,7 @@ const Description = styled.p`
   color: hsl(0, 0%, 98%);
   font-family: 'Karla', sans-serif;
   font-size:16px;
+  // width:70%;
 `
 const HeroImage = styled.img`
   margin-left:20px;
