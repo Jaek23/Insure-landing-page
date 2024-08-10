@@ -23,7 +23,6 @@ const Hero = () => {
             </div>
             <HeroImage src={heroImage} alt='hero'/>
           </TextWrapper>
-            {/* <HeroImage src={heroImage} alt='hero'/> */}
             <PatternRightImage src={patternRight} alt='pattern'/>
         </ContentWrapper>
     </StyledSection>
@@ -38,14 +37,10 @@ const StyledSection = styled.section`
   height:520px;
 `
 const ContentWrapper = styled.div`
-  // display:flex;
-  // justify-content:center;
   position:relative;
   padding:100px;
 `
 const TextWrapper = styled.div`
-  // max-width:35%;
-  // border:2px solid red;
   display:flex;
   justify-content:center;
 `
@@ -68,13 +63,11 @@ const Description = styled.p`
   color: hsl(0, 0%, 98%);
   font-family: 'Karla', sans-serif;
   font-size:16px;
-  // width:70%;
 `
 const HeroImage = styled.img`
   margin-left:20px;
   width:450px;
   height:auto;
-  // align-self:flex-end;
   margin-bottom:-250px;
 `
 const PatternRightImage = styled.img`
