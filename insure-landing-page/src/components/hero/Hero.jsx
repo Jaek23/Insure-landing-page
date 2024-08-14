@@ -2,7 +2,6 @@ import React from 'react'
 import heroImage from '/heroImage.jpg'
 import patternRight from '/patternRight.svg'
 import styled, {createGlobalStyle} from 'styled-components'
-import PatternLeft from '/patternLeft.svg';
 
 const GlobalStyle = createGlobalStyle`
   body{
@@ -66,7 +65,7 @@ const Description = styled.p`
 `
 const HeroImage = styled.img`
   margin-left:20px;
-  width:450px;
+  width:500px;
   height:auto;
   margin-bottom:-250px;
 `

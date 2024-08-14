@@ -6,8 +6,8 @@ const Work = () => {
   return (
     <Section>
         <ContentWrapper>
-            <h1 style={{width:'40%'}}>Find out more about how we work</h1>
-            <button>HOW WE WORK</button>
+            <WorkTitle>Find out more <br/> about how we work</WorkTitle>
+            <WorkButton>HOW WE WORK</WorkButton>
         </ContentWrapper>
         <Pattern src={patternRight} alt='pattern'/>
     </Section>
@@ -27,11 +27,27 @@ const Section = styled.section`
 `
 const ContentWrapper = styled.div`
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
     color:#fff;
+    align-items:center;
 `
 const Pattern = styled.img`
     position:absolute;
     top:0;
     right:0;
+`
+
+const WorkTitle = styled.h1`
+    font-family:DM Serif Display, serif;
+    font-weight:700;
+`
+
+const WorkButton = styled.button`
+    font-family:Karla, serif;
+    font-weight:400;
+    background-color:transparent;
+    border:2px solid #fff;
+    color:#fff;
+    padding:5px 20px;
+    // margin-right:100px;
 `
