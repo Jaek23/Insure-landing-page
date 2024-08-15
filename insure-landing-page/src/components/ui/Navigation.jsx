@@ -5,11 +5,11 @@ import logo from '/logo.svg';
 
 const Navigation = () => {
   return (
-    <Navbar style={{display:'flex', justifyContent:'center', padding:'20px'}}>
+    <Navbar style={{display:'flex', justifyContent:'space-around', padding:'20px'}}>
         <LogoContainer>
             <img src={logo} alt="logo" />
         </LogoContainer>
-        <Nav style={{  display:'flex'}}>
+        <Nav style={{  display:'flex', width:'500px'}}>
             <StyledNavLink href='#'>HOW WE WORK</StyledNavLink>
             <StyledNavLink href='#'> BLOG</StyledNavLink>
             <StyledNavLink href='#'> ACCOUNT</StyledNavLink>
@@ -35,5 +35,5 @@ const StyledNavLink = styled(Nav.Link)`
     }
 `
 const LogoContainer = styled.div`
-  width: 35%;
+  // width: 35%;
 `;

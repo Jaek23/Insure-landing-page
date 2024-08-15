@@ -17,7 +17,7 @@ const Work = () => {
 export default Work
 
 const Section = styled.section`
-    margin-left:325px;
+    // margin-left:325px;
     margin-top:100px;
     width:75%;
     background-color: hsl(256, 26%, 20%);

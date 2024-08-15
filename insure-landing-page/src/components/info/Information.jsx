@@ -18,7 +18,7 @@ const Information = () => {
               </div>
                 <EmptyDiv/>
             </Wrapper>
-
+            <div>
             <IconsWrapper>
               <IconsDiv>
                   <IconImage src={snappyIcon} alt="snappy"/>
@@ -37,6 +37,7 @@ const Information = () => {
               </IconsDiv>
             </IconsWrapper>
             <Work/>
+            </div>
         </ContentWrapper>
       </section>
   )
@@ -52,7 +53,8 @@ const Separator = styled.div`
 `
 const Wrapper = styled.div`
   display:flex;
-  justify-content:center;
+  justify-content:space-around;
+  // border:2px solid red;
 `
 const ContentWrapper = styled.div`
   // position:relative;
@@ -61,9 +63,10 @@ const ContentWrapper = styled.div`
   // border:2px solid red;
 `
 const EmptyDiv = styled.div`
-  width: 450px; /* Same width as the HeroImage in Hero component */
+  width: 500px; /* Same width as the HeroImage in Hero component */
   height: 1px;
   margin-left: 20px;
+  // border:2px solid red;
 `
 const PatternLeftImage = styled.img`
   position:absolute;
@@ -77,15 +80,25 @@ const Title = styled.h1`
 `
 const IconsWrapper = styled.section`
   display:flex;
+  justify-content:center;
   margin-top:20px;
-  margin-left:325px;
+  // margin-left:325px;
   // border:2px solid red;
+  width:100%;
 `
 const IconsDiv = styled.div`
-  margin-top:50px;
+  // margin-top:50px;
+  // border:2px solid red;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 20px; /* Adds space between each IconsDiv */
+  text-align: center; /* Ensures text inside IconsDiv remains centered */
+   align-items: center;
 `
 const IconImage = styled.img`
   margin-bottom:20px;
+  width: 80px; /* Adjust this value to control the icon size */
+  height: auto; /* Maintains the aspect ratio */
 `
 const IconTitle = styled.h2`
   margin-bottom:20px;
@@ -94,7 +107,7 @@ const IconTitle = styled.h2`
   color: hsl(270, 9%, 17%);
 `
 const IconDescription = styled.p`
-  width:75%;
+  // width:75%;
   font-family: 'Karla', sans-serif;
   font-size:16px;
   color:hsl(273, 4%, 51%);

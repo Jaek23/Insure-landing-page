@@ -22,7 +22,8 @@ const Hero = () => {
             </div>
             <HeroImage src={heroImage} alt='hero'/>
           </TextWrapper>
-            <PatternRightImage src={patternRight} alt='pattern'/>
+          {/* <HeroImage src={heroImage} alt='hero'/> */}
+          <PatternRightImage src={patternRight} alt='pattern'/>
         </ContentWrapper>
     </StyledSection>
   )
@@ -38,10 +39,15 @@ const StyledSection = styled.section`
 const ContentWrapper = styled.div`
   position:relative;
   padding:100px;
+  // display:flex;
+  // justify-content:center;
 `
 const TextWrapper = styled.div`
   display:flex;
-  justify-content:center;
+  justify-content:space-around;
+  // flex-direction:column;
+  // border:2px solid red;
+  // width:35%;
 `
 const Separator = styled.div`
   border:0;
@@ -55,6 +61,7 @@ const Title = styled.h1`
   color:#fff;
   font-family: 'DM Serif Display', serif;
   max-width:55%;
+  // border:2px solid red;
 `
 const Description = styled.p`
   line-height:1.5;
@@ -62,12 +69,15 @@ const Description = styled.p`
   color: hsl(0, 0%, 98%);
   font-family: 'Karla', sans-serif;
   font-size:16px;
+  // width:35%;
+  // border:2px solid red;
 `
 const HeroImage = styled.img`
   margin-left:20px;
   width:500px;
   height:auto;
   margin-bottom:-250px;
+  // border:2px solid red;
 `
 const PatternRightImage = styled.img`
   position:absolute;
@@ -87,4 +97,5 @@ const ActionButton = styled.button`
   color:#fff;
   padding: 5px 20px;
   margin-top:10px;
+  // border:2px solid red;
 `
