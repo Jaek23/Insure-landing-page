@@ -14,7 +14,7 @@ const Hero = () => {
     <StyledSection>
         <ContentWrapper>
           <TextWrapper>
-            <div style={{width:'35%'}}>
+            <div style={{width:'530px'}}>
             <Separator/>
             <Title>Humanizing your insurance.</Title>
             <Description>Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that's right for you. Ensure you and your loved ones are protected.</Description>
@@ -44,7 +44,7 @@ const ContentWrapper = styled.div`
 `
 const TextWrapper = styled.div`
   display:flex;
-  justify-content:space-around;
+  justify-content:center;
   // flex-direction:column;
   // border:2px solid red;
   // width:35%;

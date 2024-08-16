@@ -12,13 +12,12 @@ const Information = () => {
         <PatternLeftImage src={PatternLeft} alt='pattern' />
         <ContentWrapper>
             <Wrapper>
-              <div style={{width:'35%'}}>
+              <div style={{width:'530px'}}>
                 <Separator/>
                 <Title>We're different</Title>
               </div>
                 <EmptyDiv/>
             </Wrapper>
-            <div>
             <IconsWrapper>
               <IconsDiv>
                   <IconImage src={snappyIcon} alt="snappy"/>
@@ -37,7 +36,6 @@ const Information = () => {
               </IconsDiv>
             </IconsWrapper>
             <Work/>
-            </div>
         </ContentWrapper>
       </section>
   )
@@ -53,7 +51,7 @@ const Separator = styled.div`
 `
 const Wrapper = styled.div`
   display:flex;
-  justify-content:space-around;
+  justify-content:center;
   // border:2px solid red;
 `
 const ContentWrapper = styled.div`
@@ -61,6 +59,9 @@ const ContentWrapper = styled.div`
   padding:100px;
   margin-top:180px;
   // border:2px solid red;
+  // display:flex;
+  // flex-direction:column;
+  // justify-content:center;
 `
 const EmptyDiv = styled.div`
   width: 500px; /* Same width as the HeroImage in Hero component */
@@ -80,11 +81,12 @@ const Title = styled.h1`
 `
 const IconsWrapper = styled.section`
   display:flex;
-  justify-content:center;
+  margin:0 auto;
   margin-top:20px;
   // margin-left:325px;
   // border:2px solid red;
   width:100%;
+  max-width:1050px;
 `
 const IconsDiv = styled.div`
   // margin-top:50px;
@@ -92,8 +94,8 @@ const IconsDiv = styled.div`
   display: flex;
   flex-direction: column;
   margin: 50px 20px; /* Adds space between each IconsDiv */
-  text-align: center; /* Ensures text inside IconsDiv remains centered */
-   align-items: center;
+  // text-align: center; /* Ensures text inside IconsDiv remains centered */
+  //  align-items: center;
 `
 const IconImage = styled.img`
   margin-bottom:20px;

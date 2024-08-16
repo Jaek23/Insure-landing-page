@@ -18,12 +18,14 @@ export default Work
 
 const Section = styled.section`
     // margin-left:325px;
-    margin-top:100px;
-    width:75%;
+    // margin-top:100px;
+    width:100%;
+    max-width:1050px;
     background-color: hsl(256, 26%, 20%);
     position:relative;
     overflow:hidden;
     padding:80px;
+    margin: 100px auto;
 `
 const ContentWrapper = styled.div`
     display:flex;
