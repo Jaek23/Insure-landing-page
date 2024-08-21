@@ -12,10 +12,10 @@ const Information = () => {
         <PatternLeftImage src={PatternLeft} alt='pattern' />
         <ContentWrapper>
             <Wrapper>
-              <div style={{width:'530px'}}>
+              <WrapperContent>
                 <Separator/>
                 <Title>We're different</Title>
-              </div>
+              </WrapperContent>
                 <EmptyDiv/>
             </Wrapper>
             <IconsWrapper>
@@ -48,31 +48,45 @@ const Separator = styled.div`
   border-top:1px solid hsl(270, 9%, 17%);
   margin-bottom:50px;
   width:30%;
+
+  @media (max-width: 830px) {
+    margin: auto;
+    margin-bottom:50px;
+  }
 `
 const Wrapper = styled.div`
   display:flex;
   justify-content:center;
-  // border:2px solid red;
+
+  @media (max-width: 830px) {
+    text-align:center;
+  }
 `
 const ContentWrapper = styled.div`
-  // position:relative;
   padding:100px;
   margin-top:180px;
-  // border:2px solid red;
-  // display:flex;
-  // flex-direction:column;
-  // justify-content:center;
+
+   @media (max-width: 830px) {
+  margin-top:50px;
+  }
 `
 const EmptyDiv = styled.div`
-  width: 500px; /* Same width as the HeroImage in Hero component */
+  width: 500px;
   height: 1px;
   margin-left: 20px;
-  // border:2px solid red;
+
+  @media (max-width: 830px) {
+   display:none;
+  }
 `
 const PatternLeftImage = styled.img`
   position:absolute;
   top:350px;
   width:250px;
+
+  @media (max-width: 1600px) {
+    display: none;
+  }
 `
 const Title = styled.h1`
   font-weight:700;
@@ -83,24 +97,28 @@ const IconsWrapper = styled.section`
   display:flex;
   margin:0 auto;
   margin-top:20px;
-  // margin-left:325px;
-  // border:2px solid red;
   width:100%;
   max-width:1050px;
+
+  @media (max-width: 830px) {
+    flex-direction: column;
+    align-items: center;
+     text-align: center;
+  }
 `
 const IconsDiv = styled.div`
-  // margin-top:50px;
-  // border:2px solid red;
   display: flex;
   flex-direction: column;
-  margin: 50px 20px; /* Adds space between each IconsDiv */
-  // text-align: center; /* Ensures text inside IconsDiv remains centered */
-  //  align-items: center;
+  margin: 50px 20px; 
 `
 const IconImage = styled.img`
   margin-bottom:20px;
-  width: 80px; /* Adjust this value to control the icon size */
-  height: auto; /* Maintains the aspect ratio */
+  width: 80px;
+  height: auto; 
+  
+   @media (max-width: 830px) {
+    align-self:center;
+  }
 `
 const IconTitle = styled.h2`
   margin-bottom:20px;
@@ -109,8 +127,10 @@ const IconTitle = styled.h2`
   color: hsl(270, 9%, 17%);
 `
 const IconDescription = styled.p`
-  // width:75%;
   font-family: 'Karla', sans-serif;
   font-size:16px;
   color:hsl(273, 4%, 51%);
+`
+const WrapperContent = styled.div`
+  width:530px;
 `

@@ -9,49 +9,49 @@ import styled from 'styled-components';
 
 const Footer = () => {
   return (
-   <section style={{position: 'relative',backgroundColor:'hsl(0, 0%, 98%)'}}>
+   <FooterSection>
     <FooterPattern src={footerPattern} alt="footer-pattern" />
-    <div style={{paddingTop:'50px', paddingBottom:'50px', maxWidth:'1050px', width:'100%', margin:'auto'}}>
-    <div style={{display:'flex', justifyContent:'space-between'}}>    
-        <img src={logo} alt="logo" />
-        <div style={{display:'flex', gap:'20px'}}>
-            <img src={facebook} alt="facebook-logo" />
-            <img src={twitter} alt="twitter-logo" />
-            <img src={pintrest} alt="pintrest" />
-            <img src={instagram} alt="instragram-logo" />
-        </div>
-    </div> 
-    <Separator/>
-    <div style={{display:'flex', justifyContent:'space-between' }}>
-        <ul style={{listStyleType:'none', fontFamily:'Karla, serif', fontSize:'16px'}}>
-            <li style={{marginTop:'20px', marginBottom:'20px', color:'hsl(273, 4%, 51%)', fontWeight:'bold'}}>OUR COMPANY</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold', marginBottom:'10px'}}>HOW WE WORK</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold', marginBottom:'10px'}}>WHY INSURE?</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold', marginBottom:'10px'}}>VIEW PLANS</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold'}}>REVIEWS</li>
-        </ul>
-        <ul style={{listStyleType:'none', fontFamily:'Karla, serif'}}>
-            <li style={{marginTop:'20px', marginBottom:'20px', color:'hsl(273, 4%, 51%)', fontWeight:'bold'}}>HELP ME</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold', marginBottom:'10px'}}>FAQ</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold', marginBottom:'10px'}}>TERMS OF USE</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold', marginBottom:'10px'}}>PRIVACY POLICY</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold'}}>COOKIES</li>
-        </ul>
-        <ul style={{listStyleType:'none', fontFamily:'Karla, serif'}}>
-            <li style={{marginTop:'20px', marginBottom:'20px', color:'hsl(273, 4%, 51%)', fontWeight:'bold'}}>CONTACT</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold', marginBottom:'10px'}}>SALES</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold', marginBottom:'10px'}}>SUPPORT</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold'}}>LIVE CHAT</li>
-        </ul>
-        <ul style={{listStyleType:'none', fontFamily:'Karla, serif'}}>
-            <li style={{marginTop:'20px', marginBottom:'20px', color:'hsl(273, 4%, 51%)', fontWeight:'bold'}}>OTHERS</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold', marginBottom:'10px'}}>CAREERS</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold', marginBottom:'10px'}}>PRESS</li>
-            <li style={{color:'hsl(270, 9%, 17%)', fontWeight:'bold'}}>LICENSES</li>
-        </ul>
-    </div>
-    </div>
-   </section>
+    <FooterContent>
+        <IconsWrapper>    
+            <img src={logo} alt="logo" />
+            <Icons>
+                <img src={facebook} alt="facebook-logo" />
+                <img src={twitter} alt="twitter-logo" />
+                <img src={pintrest} alt="pintrest" />
+                <img src={instagram} alt="instragram-logo" />
+            </Icons>
+        </IconsWrapper> 
+        <Separator/>
+        <FooterInformation>
+            <ListSection>
+                <FirstList>OUR COMPANY</FirstList>
+                <List>HOW WE WORK</List>
+                <List>WHY INSURE?</List>
+                <List>VIEW PLANS</List>
+                <List>REVIEWS</List>
+            </ListSection>
+            <ListSection>
+                <FirstList>HELP ME</FirstList>
+                <List>FAQ</List>
+                <List>TERMS OF USE</List>
+                <List>PRIVACY POLICY</List>
+                <List>COOKIES</List>
+            </ListSection>
+            <ListSection>
+                <FirstList>CONTACT</FirstList>
+                <List>SALES</List>
+                <List>SUPPORT</List>
+                <List>LIVE CHAT</List>
+            </ListSection>
+            <ListSection>
+                <FirstList>OTHERS</FirstList>
+                <List>CAREERS</List>
+                <List>PRESS</List>
+                <List>LICENSES</List>
+            </ListSection>
+        </FooterInformation>
+    </FooterContent>
+   </FooterSection>
   )
 }
 
@@ -63,7 +63,70 @@ const Separator = styled.div`
     display:inline-block;
 `
 const FooterPattern = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-`;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+     @media (max-width: 1024px) {
+    display: none;
+  }
+`
+const FooterSection = styled.section`
+    position:relative;
+    background-color:hsl(0, 0%, 98%);
+
+     @media (max-width: 1024px) {
+    padding: 20px 10px;
+  }
+`
+const FooterContent = styled.div`
+    padding-top:50px;
+    padding-bottom:50px;
+    max-width:1050px;
+    width:100%;
+    margin:auto;
+
+     @media (max-width: 1024px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+`
+const IconsWrapper = styled.div`
+    display:flex;
+    justify-content:space-between;
+
+    @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+`
+const Icons = styled.div`
+    display:flex;
+    gap:20px;
+    cursor:pointer;
+
+    @media (max-width: 1024px) {
+    margin-top: 15px;
+  }
+`
+const FooterInformation = styled.div`
+    display:flex;
+    justify-content:space-between;
+`
+const ListSection = styled.ul`
+    list-style-type:none;
+    font-family:Karla, serif
+`
+const FirstList = styled.li`
+    margin-top:20px;
+    margin-bottom:20px;
+    color:hsl(273, 4%, 51%);
+    font-weight:bold;
+`
+const List = styled.li`
+    color:hsl(270, 9%, 17%);
+    font-weight:bold;
+    margin-Bottom:10px;
+    cursor:pointer;
+`

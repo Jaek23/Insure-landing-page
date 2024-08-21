@@ -5,17 +5,17 @@ import logo from '/logo.svg';
 
 const Navigation = () => {
   return (
-    <Navbar style={{display:'flex', justifyContent:'space-around', padding:'20px'}}>
-        <LogoContainer>
+    <StyledNavbar>
+        <LogoWrapper>
             <img src={logo} alt="logo" />
-        </LogoContainer>
-        <Nav style={{  display:'flex', width:'500px'}}>
+        </LogoWrapper>
+        <Nav style={{  display:'flex'}}>
             <StyledNavLink href='#'>HOW WE WORK</StyledNavLink>
             <StyledNavLink href='#'> BLOG</StyledNavLink>
             <StyledNavLink href='#'> ACCOUNT</StyledNavLink>
             <StyledNavLink href='#'>VIEW PLANS</StyledNavLink>
         </Nav>      
-    </Navbar>
+    </StyledNavbar>
   )
 }
 
@@ -27,13 +27,41 @@ const StyledNavLink = styled(Nav.Link)`
     font-weight:700;
     font-size:16px;
     font-family:'Karla', sans-serif;
-    // padding: 8px 12px;
-     letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
     &:hover {
         border:1px solid black;
-         padding: 7px 11px;
+        padding: 7px 11px;
+        color:black;
     }
+
+     &:link {
+     color: hsl(273, 4%, 51%); 
+    }
+
+    &:visited {
+    color: hsl(273, 4%, 51%);
+    }
+
+    @media (max-width: 830px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 `
-const LogoContainer = styled.div`
-  // width: 35%;
+const StyledNavbar = styled.div`
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  align-items:center;
+
+  @media (max-width: 830px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+`;
+const LogoWrapper = styled.div`
+  @media (max-width: 830px) {
+    margin-bottom: 10px; /* Adds space between logo and links */
+  }
 `;
